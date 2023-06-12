@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>12 Jun 2023, 00:32</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.theUserAcceptsAllCookies()</td>
+              <td>1</td>
+              <td class="duration" data-value="3089105300">3.089</td>
+              <td class="duration" data-value="3089105300">3.089</td>
+              <td class="duration" data-value="3089105300">3.089</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.theUserClicksOn(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="56709200">0.056</td>
+              <td class="duration" data-value="56709200">0.056</td>
+              <td class="duration" data-value="56709200">0.056</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.theUserClicksOnTheButton(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1132148400">1.132</td>
+              <td class="duration" data-value="1132148400">1.132</td>
+              <td class="duration" data-value="1132148400">1.132</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.theUserClicksTheButton(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="863852200">0.863</td>
+              <td class="duration" data-value="863852200">0.863</td>
+              <td class="duration" data-value="863852200">0.863</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.theUserExpandsTheDateDeparturePassengersSection()</td>
+              <td>1</td>
+              <td class="duration" data-value="2339460100">2.339</td>
+              <td class="duration" data-value="2339460100">2.339</td>
+              <td class="duration" data-value="2339460100">2.339</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.theUserFillsInContactDetailsAndSelectsAsAnswerToHowDidYouHearAboutUs(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="869859300">0.869</td>
+              <td class="duration" data-value="869859300">0.869</td>
+              <td class="duration" data-value="869859300">0.869</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.theUserFillsInThePassengerDetails()</td>
+              <td>1</td>
+              <td class="duration" data-value="13966891500">13.966</td>
+              <td class="duration" data-value="13966891500">13.966</td>
+              <td class="duration" data-value="13966891500">13.966</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.theUserIsOnTheHomepageOfThe(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1214986100">1.214</td>
+              <td class="duration" data-value="1214986100">1.214</td>
+              <td class="duration" data-value="1214986100">1.214</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.theUserScrollsToTheBottomOfThePageAndSelectsTheNextAvailableDate()</td>
+              <td>1</td>
+              <td class="duration" data-value="1121919000">1.121</td>
+              <td class="duration" data-value="1121919000">1.121</td>
+              <td class="duration" data-value="1121919000">1.121</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.theUserSearchesForInTheSearchBar(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="4465006100">4.465</td>
+              <td class="duration" data-value="4465006100">4.465</td>
+              <td class="duration" data-value="4465006100">4.465</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.theUserSelectsTheNumberOfRoomsRequiredAsForPeople(int)</td>
+              <td>1</td>
+              <td class="duration" data-value="1504151700">1.504</td>
+              <td class="duration" data-value="1504151700">1.504</td>
+              <td class="duration" data-value="1504151700">1.504</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.theUserVerifiesThatTheButtonIsEnabled(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="80750200">0.080</td>
+              <td class="duration" data-value="80750200">0.080</td>
+              <td class="duration" data-value="80750200">0.080</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.theUserVerifiesTheTextIsDisplayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="8159432500">8.159</td>
+              <td class="duration" data-value="8159432500">8.159</td>
+              <td class="duration" data-value="8159432500">8.159</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.thenTheDetailsPopulatedAreValid()</td>
+              <td>1</td>
+              <td class="duration" data-value="68054800">0.068</td>
+              <td class="duration" data-value="68054800">0.068</td>
+              <td class="duration" data-value="68054800">0.068</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.userClicksOnButton(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1942636500">1.942</td>
+              <td class="duration" data-value="1942636500">1.942</td>
+              <td class="duration" data-value="1942636500">1.942</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.userSelectAdultsFromDropdownMenuAndValidateTheAirport(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1277240100">1.277</td>
+              <td class="duration" data-value="1277240100">1.277</td>
+              <td class="duration" data-value="1277240100">1.277</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.userShouldNotSeeTheText(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="10039729900">10.039</td>
+              <td class="duration" data-value="10039729900">10.039</td>
+              <td class="duration" data-value="10039729900">10.039</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.userShouldSeeTheTitleIs(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="17845000">0.017</td>
+              <td class="duration" data-value="17845000">0.017</td>
+              <td class="duration" data-value="17845000">0.017</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Book_A_TripStepDefinitions.userValidateThePriceForAdults(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="30483900">0.030</td>
+              <td class="duration" data-value="30483900">0.030</td>
+              <td class="duration" data-value="30483900">0.030</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Hooks.setup()</td>
+              <td>1</td>
+              <td class="duration" data-value="1157381000">1.157</td>
+              <td class="duration" data-value="1157381000">1.157</td>
+              <td class="duration" data-value="1157381000">1.157</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.mailTravelIndia.step_definitions.Hooks.teardownScenario(io.cucumber.java.Scenario)</td>
+              <td>1</td>
+              <td class="duration" data-value="3007400">0.003</td>
+              <td class="duration" data-value="3007400">0.003</td>
+              <td class="duration" data-value="3007400">0.003</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>21</td>
+            <td>21</td>
+            <td class="duration">2.542</td>
+            <td class="duration">13.966</td>
+            <td class="duration">53.400</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
