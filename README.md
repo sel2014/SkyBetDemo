@@ -1,4 +1,4 @@
-My Framework Summary:
+My Framework Summary and SkyBet Demo Task
 
 1- I am using Java Selenium Cucumber framework and junit for my assertions.
 2- I created my POM.XML file and added my dependencies and plugins that I needed
@@ -10,7 +10,7 @@ My Framework Summary:
 5- I have Singleten Design Pattern in my framework. SDP allows to have only one instance 
    of my driver in my entire project.
 6- I created my BrowserUtils class to keep my commonly use method. This enables me to write
-   clean code and prevent reparative coding.
+   clean code and prevent repetative coding.
 7- Next I have my Hooks class.Hooks class allows me to execute certain actions after each 
    scenario. Maximizing window or taking screenshot if scenario is failing
    Driver.closeDriver() is also important method in hooks class which classes the current
