@@ -1,9 +1,4 @@
-Project Summary:
-I have been given this task to complete as part of my application process.
-I took the following steps to complete.
-
-I converted the task to a User Story first of all. This will help me to create my features
-files for my steps and easy to understand for non-technical team members.
+My Framework Summary:
 
 1- I am using Java Selenium Cucumber framework and junit for my assertions.
 2- I created my POM.XML file and added my dependencies and plugins that I needed
@@ -18,7 +13,7 @@ files for my steps and easy to understand for non-technical team members.
    clean code and prevent reparative coding.
 7- Next I have my Hooks class.Hooks class allows me to execute certain actions after each 
    scenario. Maximizing window or taking screenshot if scenario is failing
-   Driver.closeDriver() is also important method in hooks class which closses the current
+   Driver.closeDriver() is also important method in hooks class which classes the current
    browser session.
 8- ConfigurationReader class enables me to read from configuration.properties
 9- Finally I have features folder where I have my features for each scenarios. I run these
@@ -28,5 +23,4 @@ files for my steps and easy to understand for non-technical team members.
     of my project. I can run my tests, add my tags such as @smoke or @regression, paths to
     my features files and step definitions.
 
-  I tried to explain briefly about my framework. I am happy to explain further if given the
-  opportunity.
+  I briefly tried to explain my Framework. I am happy to explain further if asked.
