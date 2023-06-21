@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
          features = "src/test/resources/features",
         glue = "com/SkyBet/step_definitions",
         dryRun = false,
-       // tags = "@wip", //I use tags to add tags to my scenarios such as @smoke @regression
+        tags = "@wip", //I use tags to add tags to my scenarios such as @smoke @regression
         publish = true // I use this to share my cucumber report, it gives me link on the console below
 
 )
